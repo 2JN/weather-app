@@ -5,7 +5,7 @@ const message2 = document.querySelector('#message-2')
 
 const weatherRequest = async (place) => {
   try {
-    const res = await fetch(`http://localhost:3000/weather?place=${place}`)
+    const res = await fetch(`/weather?place=${place}`)
     const {location, forecast, error} = await res.json()
 
     if (error) throw new Error(error)
